@@ -22,8 +22,8 @@ class _CustomPasswordFieldState extends State<CustomPasswordField> {
       child: TextFormField(
         decoration: InputDecoration(
           labelText: widget.label,
-          labelStyle: TextStyle(fontSize: 16.sp),
-          prefixIcon: Icon(Icons.lock, color: Colors.grey, size: 22.sp),
+          labelStyle: TextStyle(fontSize: 16.sp, color: Colors.black54),
+          prefixIcon: Icon(Icons.lock, color: Color(0xFF002147), size: 22.sp),
           suffixIcon: IconButton(
             onPressed: () {
               setState(() {
@@ -32,28 +32,29 @@ class _CustomPasswordFieldState extends State<CustomPasswordField> {
             },
             icon: Icon(
               _isPasswordVisible ? Icons.visibility : Icons.visibility_off,
-              color: Colors.blue.shade700,
+              color: Color(0xFF002147),
               size: 22.sp,
             ),
           ),
           filled: true,
-          fillColor: Colors.grey[200],
+          fillColor: Color(0xFFE0E0E0), // رمادي فاتح للخلفية
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12.r),
             borderSide: BorderSide.none,
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12.r),
-            borderSide: BorderSide(color: Colors.grey, width: 1.w),
+            borderSide: BorderSide(color: Color(0xFFB0BEC5), width: 1.w), // رمادي هادئ
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12.r),
-            borderSide: BorderSide(color: Colors.blue.shade700, width: 2.w),
+            borderSide: BorderSide(color: Color(0xFF002147), width: 2.w), // أزرق غامق
           ),
         ),
         obscureText: !_isPasswordVisible,
-        validator: (value) =>
-            value == null || value.isEmpty ? 'يرجى إدخال ${widget.label}' : null,
+        validator: (value) => value == null || value.isEmpty
+            ? 'يرجى إدخال ${widget.label}'
+            : null,
       ),
     );
   }

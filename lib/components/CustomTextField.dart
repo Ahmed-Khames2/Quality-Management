@@ -25,24 +25,24 @@ class CustomTextField extends StatelessWidget {
       focusNode: focusNode,
       controller: controller,
       keyboardType: keyboardType,
-      style: TextStyle(fontSize: 16.sp), // ضبط حجم النص ليكون متجاوبًا
+      style: TextStyle(fontSize: 16.sp, color: Colors.black87), // لون نص واضح
       decoration: InputDecoration(
         labelText: label,
-        labelStyle: TextStyle(fontSize: 14.sp),
-        prefixIcon: Icon(icon, color: Colors.grey.shade700, size: 24.sp),
+        labelStyle: TextStyle(fontSize: 14.sp, color: Colors.black54),
+        prefixIcon: Icon(icon, color: Color(0xFF002147), size: 24.sp),
         filled: true,
-        fillColor: Colors.grey[200],
+        fillColor: Color(0xFFE0E0E0), // رمادي فاتح للخلفية
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.r),
           borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.r),
-          borderSide: BorderSide(color: Colors.grey, width: 1.w),
+          borderSide: BorderSide(color: Color(0xFFB0BEC5), width: 1.w), // رمادي غامق
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.r),
-          borderSide: BorderSide(color: Colors.blue.shade700, width: 2.w),
+          borderSide: BorderSide(color: Color(0xFF002147), width: 2.w), // أزرق غامق
         ),
       ),
       validator: (value) =>
