@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sign_up_page/components/CusomPasswordField.dart';
-import 'package:sign_up_page/components/CustomDropdownField.dart';
-import 'package:sign_up_page/components/CustomTextField.dart';
+import 'package:sign_up_page/featcher/Auth/components/CusomPasswordField.dart';
+import 'package:sign_up_page/featcher/Auth/components/CustomDropdownField.dart';
+import 'package:sign_up_page/featcher/Auth/components/CustomTextField.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});

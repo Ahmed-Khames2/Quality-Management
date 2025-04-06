@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'signup_page.dart';
+import 'package:sign_up_page/featcher/onbording/pages/onbordpage.dart';
+import 'package:sign_up_page/featcher/splash/pages/splashpage.dart';
+import 'package:sign_up_page/testpage.dart';
+import 'featcher/Auth/pages/signup_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +26,8 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
             useMaterial3: true,
           ),
-          home: const SignUpPage(),
+          // home: const SignUpPage(),
+          home:  OnboardingScreen(),
         );
       },
     );
